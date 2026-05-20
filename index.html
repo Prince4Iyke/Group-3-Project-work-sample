@@ -1,0 +1,216 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROJECT WORK</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GROUP 3 - PROJECT PORTFOLIO</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button id="themeToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <div class="menu-btn" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero reveal" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Frank David</span></h1>
+      <h2>Frontend Developer</h2>
+      <p>
+        I build responsive and interactive websites using modern web technologies. <br>You can click button to view my projects completed. <br>
+        I am also open for project work.
+      </p>
+
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
+        alt="Profile Image">
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section class="about reveal" id="about">
+    <h2 class="section-title-About">About Me</h2>
+
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          I am a passionate frontend developer with experience in building
+          responsive and user-friendly websites. I enjoy creating modern UI
+          designs and interactive web experiences.
+        </p>
+
+        <p>
+          My goal is to develop websites that are visually appealing,
+          functional, and accessible on all devices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION ================= -->
+  <section class="skills reveal" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">
+        <div class="skill-info">
+          <p>HTML</p>
+          <p>95%</p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress html"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-info">
+          <p>CSS</p>
+          <p>90%</p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress css"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-info">
+          <p>JavaScript</p>
+          <p>85%</p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress js"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-info">
+          <p>Responsive Design</p>
+          <p>90%</p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress responsive"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section class="projects reveal" id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Project Search -->
+<div class="project-search">
+  <input
+    type="text"
+    id="projectSearch"
+    placeholder="Search projects..."
+  />
+</div>
+
+    <div class="projects-container">
+
+      <div class="project-card" data-name="weather app">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>
+            Responsive weather dashboard using API integration and JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card" data-name="hotel booking website">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>Hotel Booking Website</h3>
+          <p>
+            Modern OTA hotel booking website with payment integration.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card" data-name="portfolio website">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>
+            Interactive personal portfolio website with animations and dark mode.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="contact reveal" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <form id="contactForm">
+
+      <input type="text" id="name" placeholder="Your Name" required />
+
+      <input type="email" id="email" placeholder="Your Email" required />
+
+      <textarea id="message" rows="5"
+        placeholder="Your Message"></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 Frontend Development | Designed by group 3</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
