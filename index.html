@@ -14,10 +14,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
 
   <!-- ================= NAVBAR ================= -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
       <div class="logo">GROUP 3 - PROJECT PORTFOLIO</div>
 
       <ul class="nav-links" id="navLinks">
@@ -29,16 +30,18 @@
       </ul>
 
       <div class="nav-icons">
-        <button id="themeToggle">
+        <button id="themeToggle" aria-label="Toggle dark mode" type="button">
           <i class="fa-solid fa-moon"></i>
         </button>
 
-        <div class="menu-btn" id="menuBtn">
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false" type="button">
           <i class="fa-solid fa-bars"></i>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
+
+  <main id="mainContent">
 
   <!-- ================= HERO SECTION ================= -->
   <section class="hero reveal" id="home">
@@ -46,8 +49,8 @@
       <h1>Hello, I'm <span>Frank David</span></h1>
       <h2>Frontend Developer</h2>
       <p>
-        I build responsive and interactive websites using modern web technologies. <br>You can click button to view my projects completed. <br>
-        I am also open for project work.
+        I build responsive, accessible, and modern websites using HTML, CSS, and JavaScript. <br>Explore my featured work below. <br>
+        Ready to collaborate on your next project.
       </p>
 
       <a href="#projects" class="btn">View Projects</a>
@@ -137,13 +140,13 @@
     <h2 class="section-title">Projects</h2>
 
     <!-- Project Search -->
-<div class="project-search">
-  <input
-    type="text"
-    id="projectSearch"
-    placeholder="Search projects..."
-  />
-</div>
+    <div class="project-search">
+      <input type="text" id="projectSearch" aria-label="Search projects" placeholder="Search projects..." />
+    </div>
+
+    <div id="noResults" aria-live="polite" style="display:none; text-align:center; margin-top:15px;">
+      No projects found
+    </div>
 
     <div class="projects-container">
 
@@ -183,6 +186,42 @@
         </div>
       </div>
 
+      <div class="project-card" data-name="e-commerce store">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>E-commerce Store</h3>
+          <p>
+            Clean product catalog and checkout experience designed for conversions.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card" data-name="task manager app">
+        <img src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>Task Manager App</h3>
+          <p>
+            Task tracking app with intuitive UI and dynamic list filtering.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card" data-name="travel landing page">
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600"
+          alt="Project">
+
+        <div class="project-content">
+          <h3>Travel Landing Page</h3>
+          <p>
+            Responsive travel landing page with destination highlights and booking CTA.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -191,24 +230,38 @@
     <h2 class="section-title">Contact Me</h2>
 
     <form id="contactForm">
-
+      <label class="sr-only" for="name">Your Name</label>
       <input type="text" id="name" placeholder="Your Name" required />
 
+      <label class="sr-only" for="email">Your Email</label>
       <input type="email" id="email" placeholder="Your Email" required />
 
-      <textarea id="message" rows="5"
-        placeholder="Your Message"></textarea>
+      <label class="sr-only" for="message">Your Message</label>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
 
       <button type="submit" class="btn">Send Message</button>
 
-      <p id="formMessage"></p>
+      <p id="formMessage" aria-live="polite" role="status"></p>
     </form>
   </section>
 
   <!-- ================= FOOTER ================= -->
+  </main>
+
   <footer>
-    <p>© 2026 Frontend Development | Designed by group 3</p>
+    <div class="footer-content">
+      <p>© 2026 Frontend Development | Designed by Group 3</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Visit GitHub profile"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:hello@example.com" aria-label="Send email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <!-- JS -->
   <script src="script.js"></script>
